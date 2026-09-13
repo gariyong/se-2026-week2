@@ -27,4 +27,8 @@ public class Node {
         }
         return height + 1;
     }
+  
+    public boolean hasChild(){
+        return !(this.children.isEmpty());
+    }
 }
