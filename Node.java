@@ -31,4 +31,12 @@ public class Node {
     public boolean hasChild(){
         return !(this.children.isEmpty());
     }
+
+    public void dfs(){
+        System.out.println(this.label);
+
+        for(Node child : children){
+            child.dfs();
+        }
+    }
 }
