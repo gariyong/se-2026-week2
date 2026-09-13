@@ -15,6 +15,19 @@ public class Node {
         this.children.add(child);
     }
 
+    public int height() {
+        if (children.isEmpty()) {
+            return 1;
+        }
+
+        int height = 0;
+
+        for (Node child : children) {
+            height = Math.max(height, child.height());
+        }
+        return height + 1;
+    }
+  
     public boolean hasChild(){
         return !(this.children.isEmpty());
     }
